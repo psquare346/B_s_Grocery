@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B's Deli | Woodland, AL — Home Cookin' & Country Store</title>
-    <meta name="description" content="B's Deli in Woodland, Alabama. Fresh deli sandwiches, hot biscuits, hand-tossed pizza, crispy wings, and country store essentials. Mon-Sat 6AM-8PM, Sun 9AM-7PM.">
-    <meta name="keywords" content="B's Deli, Woodland Alabama, deli, country store, pizza, wings, sandwiches, biscuits, AL-48">
+    <meta name="description"
+        content="B's Deli in Woodland, Alabama. Fresh deli sandwiches, hot biscuits, hand-tossed pizza, crispy wings, and country store essentials. Mon-Sat 6AM-8PM, Sun 9AM-7PM.">
+    <meta name="keywords"
+        content="B's Deli, Woodland Alabama, deli, country store, pizza, wings, sandwiches, biscuits, AL-48">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         /* ========== CSS RESET & VARIABLES ========== */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         :root {
             --barn-red: #8B2500;
@@ -38,7 +49,10 @@
             --font-ui: 'Inter', -apple-system, sans-serif;
         }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: var(--font-body);
             background: var(--cream);
@@ -51,25 +65,22 @@
         .wood-texture {
             position: relative;
         }
+
         .wood-texture::before {
             content: '';
             position: absolute;
             inset: 0;
             background:
-                repeating-linear-gradient(
-                    87deg,
+                repeating-linear-gradient(87deg,
                     transparent,
                     transparent 3px,
-                    rgba(0,0,0,0.02) 3px,
-                    rgba(0,0,0,0.02) 4px
-                ),
-                repeating-linear-gradient(
-                    90deg,
+                    rgba(0, 0, 0, 0.02) 3px,
+                    rgba(0, 0, 0, 0.02) 4px),
+                repeating-linear-gradient(90deg,
                     transparent,
                     transparent 18px,
-                    rgba(0,0,0,0.015) 18px,
-                    rgba(0,0,0,0.015) 20px
-                );
+                    rgba(0, 0, 0, 0.015) 18px,
+                    rgba(0, 0, 0, 0.015) 20px);
             pointer-events: none;
             z-index: 1;
         }
@@ -86,22 +97,22 @@
                 linear-gradient(165deg, var(--dark-oak) 0%, var(--barn-red-deep) 35%, var(--saddle-brown) 70%, var(--warm-wood) 100%);
             overflow: hidden;
         }
+
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(ellipse at 20% 50%, rgba(218,165,32,0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 30%, rgba(139,37,0,0.15) 0%, transparent 50%),
-                repeating-linear-gradient(
-                    0deg,
+                radial-gradient(ellipse at 20% 50%, rgba(218, 165, 32, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 30%, rgba(139, 37, 0, 0.15) 0%, transparent 50%),
+                repeating-linear-gradient(0deg,
                     transparent,
                     transparent 2px,
-                    rgba(255,255,255,0.01) 2px,
-                    rgba(255,255,255,0.01) 4px
-                );
+                    rgba(255, 255, 255, 0.01) 2px,
+                    rgba(255, 255, 255, 0.01) 4px);
             pointer-events: none;
         }
+
         .hero::after {
             content: '';
             position: absolute;
@@ -111,16 +122,18 @@
             height: 120px;
             background: linear-gradient(to top, var(--cream), transparent);
         }
+
         .hero-content {
             position: relative;
             z-index: 2;
             padding: 2rem;
             max-width: 800px;
         }
+
         .hero-badge {
             display: inline-block;
             padding: 0.4rem 1.5rem;
-            border: 1px solid rgba(218,165,32,0.4);
+            border: 1px solid rgba(218, 165, 32, 0.4);
             border-radius: 30px;
             color: var(--gold-accent);
             font-family: var(--font-ui);
@@ -131,6 +144,7 @@
             margin-bottom: 1.5rem;
             animation: fadeInDown 0.8s ease-out;
         }
+
         .hero-title {
             font-family: var(--font-display);
             font-size: clamp(3.5rem, 10vw, 7rem);
@@ -139,8 +153,9 @@
             line-height: 1;
             margin-bottom: 0.5rem;
             animation: fadeInUp 0.8s ease-out 0.2s both;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
+
         .hero-subtitle {
             font-family: var(--font-body);
             font-size: clamp(1rem, 2.5vw, 1.3rem);
@@ -150,6 +165,7 @@
             margin-bottom: 2rem;
             animation: fadeInUp 0.8s ease-out 0.4s both;
         }
+
         .hero-info {
             display: flex;
             flex-wrap: wrap;
@@ -157,25 +173,29 @@
             justify-content: center;
             animation: fadeInUp 0.8s ease-out 0.6s both;
         }
+
         .hero-info-item {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            color: rgba(255,248,240,0.85);
+            color: rgba(255, 248, 240, 0.85);
             font-family: var(--font-ui);
             font-size: 0.85rem;
             font-weight: 400;
         }
+
         .hero-info-item svg {
             width: 18px;
             height: 18px;
             color: var(--gold-accent);
             flex-shrink: 0;
         }
+
         .hero-cta {
             margin-top: 2.5rem;
             animation: fadeInUp 0.8s ease-out 0.8s both;
         }
+
         .hero-cta a {
             display: inline-block;
             padding: 0.9rem 2.5rem;
@@ -189,12 +209,13 @@
             text-decoration: none;
             border-radius: 4px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(218,165,32,0.3);
+            box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
         }
+
         .hero-cta a:hover {
             background: #E8B828;
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(218,165,32,0.4);
+            box-shadow: 0 6px 25px rgba(218, 165, 32, 0.4);
         }
 
         /* ========== DECORATIVE DIVIDER ========== */
@@ -205,11 +226,13 @@
             gap: 1rem;
             padding: 1rem 0;
         }
+
         .divider-line {
             height: 1px;
             width: 60px;
             background: linear-gradient(to right, transparent, var(--burlywood), transparent);
         }
+
         .divider-icon {
             color: var(--gold-soft);
             font-size: 1.2rem;
@@ -226,6 +249,7 @@
             position: relative;
             z-index: 3;
         }
+
         .info-strip-item {
             display: flex;
             align-items: center;
@@ -236,16 +260,22 @@
             font-weight: 400;
             letter-spacing: 0.5px;
         }
+
         .info-strip-item svg {
-            width: 16px; height: 16px;
+            width: 16px;
+            height: 16px;
             color: var(--gold-accent);
         }
+
         .info-strip-item a {
             color: var(--burlywood);
             text-decoration: none;
             transition: color 0.2s;
         }
-        .info-strip-item a:hover { color: var(--gold-accent); }
+
+        .info-strip-item a:hover {
+            color: var(--gold-accent);
+        }
 
         /* ========== MENU SECTION ========== */
         .menu-section {
@@ -253,10 +283,12 @@
             margin: 0 auto;
             padding: 4rem 1.5rem 5rem;
         }
+
         .section-header {
             text-align: center;
             margin-bottom: 3rem;
         }
+
         .section-header h2 {
             font-family: var(--font-display);
             font-size: clamp(2rem, 5vw, 3rem);
@@ -264,6 +296,7 @@
             color: var(--dark-oak);
             margin-bottom: 0.5rem;
         }
+
         .section-header p {
             font-family: var(--font-body);
             font-style: italic;
@@ -279,6 +312,7 @@
             gap: 0.5rem;
             margin-bottom: 3rem;
         }
+
         .category-tab {
             padding: 0.6rem 1.4rem;
             background: transparent;
@@ -292,11 +326,13 @@
             transition: all 0.3s ease;
             letter-spacing: 0.5px;
         }
+
         .category-tab:hover {
             border-color: var(--saddle-brown);
             color: var(--saddle-brown);
-            background: rgba(139,69,19,0.05);
+            background: rgba(139, 69, 19, 0.05);
         }
+
         .category-tab.active {
             background: var(--dark-oak);
             border-color: var(--dark-oak);
@@ -304,7 +340,10 @@
         }
 
         /* ========== MENU GRID ========== */
-        .menu-category { margin-bottom: 3rem; }
+        .menu-category {
+            margin-bottom: 3rem;
+        }
+
         .menu-category-title {
             font-family: var(--font-display);
             font-size: 1.6rem;
@@ -315,6 +354,7 @@
             border-bottom: 2px solid var(--burlywood);
             position: relative;
         }
+
         .menu-category-title::after {
             content: '';
             position: absolute;
@@ -324,11 +364,13 @@
             height: 2px;
             background: var(--barn-red);
         }
+
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 1rem;
         }
+
         .menu-item {
             display: flex;
             justify-content: space-between;
@@ -336,16 +378,22 @@
             padding: 1rem 1.2rem;
             background: white;
             border-radius: 8px;
-            border: 1px solid rgba(222,184,135,0.3);
+            border: 1px solid rgba(222, 184, 135, 0.3);
             transition: all 0.3s ease;
             box-shadow: 0 1px 4px var(--shadow-warm);
         }
+
         .menu-item:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px var(--shadow-warm);
             border-color: var(--burlywood);
         }
-        .menu-item-info { flex: 1; padding-right: 1rem; }
+
+        .menu-item-info {
+            flex: 1;
+            padding-right: 1rem;
+        }
+
         .menu-item-name {
             font-family: var(--font-display);
             font-weight: 600;
@@ -353,12 +401,14 @@
             color: var(--dark-oak);
             margin-bottom: 0.2rem;
         }
+
         .menu-item-desc {
             font-family: var(--font-ui);
             font-size: 0.78rem;
             color: var(--text-light);
             line-height: 1.4;
         }
+
         .menu-item-price {
             font-family: var(--font-display);
             font-weight: 700;
@@ -370,6 +420,7 @@
             align-items: flex-end;
             gap: 0.15rem;
         }
+
         .price-size {
             font-family: var(--font-ui);
             font-size: 0.65rem;
@@ -378,6 +429,7 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
         .price-row {
             display: flex;
             align-items: center;
@@ -389,6 +441,7 @@
             text-align: center;
             padding: 4rem 2rem;
         }
+
         .loading-spinner {
             width: 48px;
             height: 48px;
@@ -398,12 +451,14 @@
             animation: spin 0.8s linear infinite;
             margin: 0 auto 1.5rem;
         }
+
         .loading-text {
             font-family: var(--font-body);
             font-style: italic;
             color: var(--text-light);
             font-size: 1rem;
         }
+
         .error-message {
             text-align: center;
             padding: 3rem 2rem;
@@ -413,11 +468,13 @@
             max-width: 500px;
             margin: 2rem auto;
         }
+
         .error-message h3 {
             font-family: var(--font-display);
             color: var(--barn-red);
             margin-bottom: 0.5rem;
         }
+
         .error-message p {
             font-family: var(--font-ui);
             color: var(--text-medium);
@@ -431,6 +488,7 @@
             padding: 3rem 2rem 1.5rem;
             position: relative;
         }
+
         .footer::before {
             content: '';
             position: absolute;
@@ -440,6 +498,7 @@
             height: 4px;
             background: linear-gradient(to right, var(--barn-red), var(--gold-accent), var(--barn-red));
         }
+
         .footer-content {
             max-width: 1000px;
             margin: 0 auto;
@@ -447,30 +506,38 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
+
         .footer-col h3 {
             font-family: var(--font-display);
             font-size: 1.2rem;
             color: var(--cream);
             margin-bottom: 1rem;
         }
-        .footer-col p, .footer-col a {
+
+        .footer-col p,
+        .footer-col a {
             font-family: var(--font-ui);
             font-size: 0.85rem;
             color: var(--burlywood);
             line-height: 1.8;
             text-decoration: none;
         }
-        .footer-col a:hover { color: var(--gold-accent); }
+
+        .footer-col a:hover {
+            color: var(--gold-accent);
+        }
+
         .footer-bottom {
             max-width: 1000px;
             margin: 2rem auto 0;
             padding-top: 1.5rem;
-            border-top: 1px solid rgba(222,184,135,0.2);
+            border-top: 1px solid rgba(222, 184, 135, 0.2);
             text-align: center;
             font-family: var(--font-ui);
             font-size: 0.75rem;
             color: var(--text-light);
         }
+
         .footer-note {
             font-family: var(--font-ui);
             font-size: 0.7rem;
@@ -481,35 +548,250 @@
 
         /* ========== ANIMATIONS ========== */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
-        .fade-in { animation: fadeIn 0.5s ease-out both; }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-out both;
+        }
+
+        /* ========== PIZZA SPECIAL PROMO ========== */
+        .pizza-promo {
+            background: linear-gradient(135deg, #3B1F0B 0%, #5C2E10 40%, #7A3B15 100%);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(47, 24, 16, 0.3);
+            border: 1px solid rgba(218, 165, 32, 0.2);
+        }
+
+        .pizza-promo::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(218, 165, 32, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .pizza-promo::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(139, 37, 0, 0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .pizza-promo-inner {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .pizza-promo-emoji {
+            font-size: 3rem;
+            line-height: 1;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+            animation: pizzaBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes pizzaBounce {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            25% {
+                transform: translateY(-6px) rotate(-3deg);
+            }
+
+            75% {
+                transform: translateY(-3px) rotate(3deg);
+            }
+        }
+
+        .pizza-promo-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            color: var(--gold-accent);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .pizza-promo-deal {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .pizza-promo-price-tag {
+            background: var(--gold-accent);
+            color: var(--dark-oak);
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.4rem;
+            padding: 0.5rem 1.2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(218, 165, 32, 0.4);
+        }
+
+        .pizza-promo-offer {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(218, 165, 32, 0.3);
+            color: var(--wheat);
+            font-family: var(--font-ui);
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.5rem 1.2rem;
+            border-radius: 8px;
+        }
+
+        .pizza-promo-toppings-label {
+            font-family: var(--font-body);
+            font-style: italic;
+            color: var(--burlywood);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .pizza-promo-toppings {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            max-width: 600px;
+        }
+
+        .topping-pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(222, 184, 135, 0.25);
+            color: var(--cream);
+            font-family: var(--font-ui);
+            font-size: 0.78rem;
+            font-weight: 400;
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            transition: all 0.25s ease;
+        }
+
+        .topping-pill:hover {
+            background: rgba(218, 165, 32, 0.15);
+            border-color: var(--gold-accent);
+            transform: translateY(-1px);
+        }
 
         /* ========== RESPONSIVE ========== */
         @media (max-width: 768px) {
-            .hero { min-height: 85vh; }
-            .hero-info { flex-direction: column; align-items: center; gap: 0.8rem; }
-            .menu-grid { grid-template-columns: 1fr; }
-            .info-strip { flex-direction: column; align-items: center; gap: 0.8rem; padding: 1.2rem; }
-            .category-tabs { gap: 0.4rem; }
-            .category-tab { padding: 0.5rem 1rem; font-size: 0.75rem; }
-            .footer-content { grid-template-columns: 1fr; text-align: center; }
+            .hero {
+                min-height: 85vh;
+            }
+
+            .hero-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-strip {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+                padding: 1.2rem;
+            }
+
+            .category-tabs {
+                gap: 0.4rem;
+            }
+
+            .category-tab {
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .pizza-promo {
+                padding: 1.8rem 1.2rem;
+                margin-bottom: 2rem;
+            }
+
+            .pizza-promo-title {
+                font-size: 1.4rem;
+            }
+
+            .pizza-promo-deal {
+                flex-direction: column;
+            }
         }
+
         @media (max-width: 400px) {
-            .menu-item { flex-direction: column; gap: 0.5rem; }
-            .menu-item-price { flex-direction: row; gap: 0.75rem; align-items: center; }
+            .menu-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .menu-item-price {
+                flex-direction: row;
+                gap: 0.75rem;
+                align-items: center;
+            }
         }
 
         /* ========== SCROLL REVEAL ========== */
@@ -518,12 +800,14 @@
             transform: translateY(20px);
             transition: all 0.6s ease-out;
         }
+
         .reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
     </style>
 </head>
+
 <body>
 
     <!-- ===== HERO ===== -->
@@ -534,15 +818,28 @@
             <p class="hero-subtitle">Country Store · Deli · Fresh Made Daily</p>
             <div class="hero-info">
                 <div class="hero-info-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
                     <span>24301 AL-48, Woodland, AL 36280</span>
                 </div>
                 <div class="hero-info-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
                     <span>(256) 449-6221</span>
                 </div>
                 <div class="hero-info-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                     <span>Mon–Sat 6AM–8PM · Sun 9AM–7PM</span>
                 </div>
             </div>
@@ -555,15 +852,28 @@
     <!-- ===== INFO STRIP ===== -->
     <div class="info-strip">
         <div class="info-strip-item">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
             <a href="tel:2564496221">Call to Order: (256) 449-6221</a>
         </div>
         <div class="info-strip-item">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            <a href="https://www.google.com/maps/search/?api=1&query=24301+AL-48+Woodland+AL+36280" target="_blank" rel="noopener">Get Directions</a>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <a href="https://www.google.com/maps/search/?api=1&query=24301+AL-48+Woodland+AL+36280" target="_blank"
+                rel="noopener">Get Directions</a>
         </div>
         <div class="info-strip-item">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
             <span>Mon–Sat 6:00 AM – 8:00 PM &nbsp;|&nbsp; Sun 9:00 AM – 7:00 PM</span>
         </div>
     </div>
@@ -578,6 +888,31 @@
             </div>
             <h2>Our Menu</h2>
             <p>Fresh made daily — just the way you like it</p>
+        </div>
+
+        <!-- Pizza Special Promo -->
+        <div class="pizza-promo reveal" id="pizzaPromo">
+            <div class="pizza-promo-inner">
+                <div class="pizza-promo-emoji">🍕</div>
+                <div class="pizza-promo-title">Pizza Special</div>
+                <div class="pizza-promo-deal">
+                    <span class="pizza-promo-price-tag">1 Pizza — $11.99</span>
+                    <span class="pizza-promo-offer">Get $1.00 Off Every 2nd Pizza!</span>
+                </div>
+                <div class="pizza-promo-toppings-label">Customize your pizza with any of our delicious toppings:</div>
+                <div class="pizza-promo-toppings">
+                    <span class="topping-pill">Pepperoni</span>
+                    <span class="topping-pill">Sausage</span>
+                    <span class="topping-pill">Beef</span>
+                    <span class="topping-pill">Bacon</span>
+                    <span class="topping-pill">Bell Peppers</span>
+                    <span class="topping-pill">Onions</span>
+                    <span class="topping-pill">Banana Peppers</span>
+                    <span class="topping-pill">Mushrooms</span>
+                    <span class="topping-pill">Black Olives</span>
+                    <span class="topping-pill">Jalapeño</span>
+                </div>
+            </div>
         </div>
 
         <!-- Category Filter Tabs -->
@@ -600,7 +935,8 @@
         <div class="footer-content">
             <div class="footer-col">
                 <h3>B's Deli</h3>
-                <p>Your neighborhood country store & deli in the heart of Woodland, Alabama. Serving up fresh deli favorites, hot biscuits, hand-tossed pizza, and crispy wings daily.</p>
+                <p>Your neighborhood country store & deli in the heart of Woodland, Alabama. Serving up fresh deli
+                    favorites, hot biscuits, hand-tossed pizza, and crispy wings daily.</p>
             </div>
             <div class="footer-col">
                 <h3>Hours</h3>
@@ -617,301 +953,304 @@
                     24301 AL-48<br>
                     Woodland, AL 36280<br><br>
                     <a href="tel:2564496221">(256) 449-6221</a><br>
-                    <a href="https://www.google.com/maps/search/?api=1&query=24301+AL-48+Woodland+AL+36280" target="_blank" rel="noopener">Get Directions →</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=24301+AL-48+Woodland+AL+36280"
+                        target="_blank" rel="noopener">Get Directions →</a>
                 </p>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 B's Deli. All rights reserved.</p>
-            <p class="footer-note">Prices subject to change without notice. Product &amp; portion availability may vary.</p>
+            <p class="footer-note">Prices subject to change without notice. Product &amp; portion availability may vary.
+            </p>
         </div>
     </footer>
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
-    (function() {
-        'use strict';
+        (function () {
+            'use strict';
 
-        // ============================================================
-        // GOOGLE SHEETS CONFIGURATION
-        // ============================================================
-        // 
-        // HOW TO CONNECT YOUR GOOGLE SHEET:
-        //
-        // 1. Create a Google Sheet with these columns (Row 1 = headers):
-        //    | Category | Item | Description | Price | Price_SM | Price_LG |
-        //
-        //    - Category: menu section (e.g. "Biscuits", "Sandwiches & Wraps")
-        //    - Item:     the item name (e.g. "Sausage Biscuit")
-        //    - Description: optional short note (e.g. "Add Egg +$0.75")
-        //    - Price:    single price if no size options (e.g. "2.29")
-        //    - Price_SM: small/regular price (leave blank if single price)
-        //    - Price_LG: large price (leave blank if single price)
-        //
-        // 2. In Google Sheets: File → Share → Publish to the web
-        //    - Choose "Entire Document" and "CSV" format
-        //    - Click "Publish" and copy the URL
-        //
-        // 3. Paste the URL below in SHEET_CSV_URL
-        //
-        // ============================================================
+            // ============================================================
+            // GOOGLE SHEETS CONFIGURATION
+            // ============================================================
+            // 
+            // HOW TO CONNECT YOUR GOOGLE SHEET:
+            //
+            // 1. Create a Google Sheet with these columns (Row 1 = headers):
+            //    | Category | Item | Description | Price | Price_SM | Price_LG |
+            //
+            //    - Category: menu section (e.g. "Biscuits", "Sandwiches & Wraps")
+            //    - Item:     the item name (e.g. "Sausage Biscuit")
+            //    - Description: optional short note (e.g. "Add Egg +$0.75")
+            //    - Price:    single price if no size options (e.g. "2.29")
+            //    - Price_SM: small/regular price (leave blank if single price)
+            //    - Price_LG: large price (leave blank if single price)
+            //
+            // 2. In Google Sheets: File → Share → Publish to the web
+            //    - Choose "Entire Document" and "CSV" format
+            //    - Click "Publish" and copy the URL
+            //
+            // 3. Paste the URL below in SHEET_CSV_URL
+            //
+            // ============================================================
 
-        const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTx9V5D-y-E4V7Xta3lnU9aEFuVddUjNrX1HVYNnd95-izGgnarlg3HhfaX79rAhwNfMEMFl6F7K55r/pub?gid=0&single=true&output=csv';  // ← PASTE YOUR PUBLISHED CSV URL HERE
+            const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTx9V5D-y-E4V7Xta3lnU9aEFuVddUjNrX1HVYNnd95-izGgnarlg3HhfaX79rAhwNfMEMFl6F7K55r/pub?gid=0&single=true&output=csv';  // ← PASTE YOUR PUBLISHED CSV URL HERE
 
-        // ============================================================
-        // FALLBACK DATA (used when Google Sheets is not connected yet)
-        // ============================================================
-        const FALLBACK_MENU = [
-            // BISCUITS
-            { category: "Biscuits", item: "Sausage Biscuit", desc: "", price: "2.29" },
-            { category: "Biscuits", item: "Bacon Biscuit", desc: "", price: "2.29" },
-            { category: "Biscuits", item: "Chicken Biscuit", desc: "", price: "3.29" },
-            { category: "Biscuits", item: "Tenderloin Biscuit", desc: "", price: "3.29" },
-            { category: "Biscuits", item: "Link Biscuit", desc: "", price: "1.99" },
-            { category: "Biscuits", item: "Add Egg", desc: "Add to any biscuit", price: "+0.75" },
-            { category: "Biscuits", item: "Add Cheese", desc: "Add to any biscuit", price: "+0.50" },
+            // ============================================================
+            // FALLBACK DATA (used when Google Sheets is not connected yet)
+            // ============================================================
+            const FALLBACK_MENU = [
+                // BISCUITS
+                { category: "Biscuits", item: "Sausage Biscuit", desc: "", price: "2.29" },
+                { category: "Biscuits", item: "Bacon Biscuit", desc: "", price: "2.29" },
+                { category: "Biscuits", item: "Chicken Biscuit", desc: "", price: "3.29" },
+                { category: "Biscuits", item: "Tenderloin Biscuit", desc: "", price: "3.29" },
+                { category: "Biscuits", item: "Link Biscuit", desc: "", price: "1.99" },
+                { category: "Biscuits", item: "Add Egg", desc: "Add to any biscuit", price: "+0.75" },
+                { category: "Biscuits", item: "Add Cheese", desc: "Add to any biscuit", price: "+0.50" },
 
-            // SALADS
-            { category: "Salads", item: "Veggie Salad", desc: "", price: "5.49" },
-            { category: "Salads", item: "Chicken Salad", desc: "Grilled, fried, or taco style", price: "7.49" },
+                // SALADS
+                { category: "Salads", item: "Veggie Salad", desc: "", price: "5.49" },
+                { category: "Salads", item: "Chicken Salad", desc: "Grilled, fried, or taco style", price: "7.49" },
 
-            // SANDWICHES & WRAPS
-            { category: "Sandwiches & Wraps", item: "BBQ Sandwich", desc: "", priceSM: "4.49", priceLG: "6.49" },
-            { category: "Sandwiches & Wraps", item: "Street Sandwich", desc: "Beef & Doritos", priceSM: "5.49", priceLG: "7.49" },
-            { category: "Sandwiches & Wraps", item: "Buffalo Chicken", desc: "Grilled or fried", priceSM: "5.49", priceLG: "7.49" },
-            { category: "Sandwiches & Wraps", item: "Grilled or Fried Chicken", desc: "", priceSM: "5.49", priceLG: "7.49" },
-            { category: "Sandwiches & Wraps", item: "Hamburger", desc: "", priceSM: "4.49", priceLG: "6.49" },
-            { category: "Sandwiches & Wraps", item: "Cheeseburger", desc: "", priceSM: "4.99", priceLG: "6.99" },
-            { category: "Sandwiches & Wraps", item: "Chicken Wrap", desc: "", priceSM: "5.49", priceLG: "7.49" },
-            { category: "Sandwiches & Wraps", item: "BLT Wrap", desc: "", priceSM: "5.49", priceLG: "7.49" },
-            { category: "Sandwiches & Wraps", item: "Add Bacon", desc: "Add to any sandwich", price: "+1.50" },
+                // SANDWICHES & WRAPS
+                { category: "Sandwiches & Wraps", item: "BBQ Sandwich", desc: "", priceSM: "4.49", priceLG: "6.49" },
+                { category: "Sandwiches & Wraps", item: "Street Sandwich", desc: "Beef & Doritos", priceSM: "5.49", priceLG: "7.49" },
+                { category: "Sandwiches & Wraps", item: "Buffalo Chicken", desc: "Grilled or fried", priceSM: "5.49", priceLG: "7.49" },
+                { category: "Sandwiches & Wraps", item: "Grilled or Fried Chicken", desc: "", priceSM: "5.49", priceLG: "7.49" },
+                { category: "Sandwiches & Wraps", item: "Hamburger", desc: "", priceSM: "4.49", priceLG: "6.49" },
+                { category: "Sandwiches & Wraps", item: "Cheeseburger", desc: "", priceSM: "4.99", priceLG: "6.99" },
+                { category: "Sandwiches & Wraps", item: "Chicken Wrap", desc: "", priceSM: "5.49", priceLG: "7.49" },
+                { category: "Sandwiches & Wraps", item: "BLT Wrap", desc: "", priceSM: "5.49", priceLG: "7.49" },
+                { category: "Sandwiches & Wraps", item: "Add Bacon", desc: "Add to any sandwich", price: "+1.50" },
 
-            // PIZZA
-            { category: "Pizza", item: "Plain / Cheese", desc: "Regular or thin crust", priceSM: "7.99", priceLG: "12.99" },
-            { category: "Pizza", item: "BBQ Pizza", desc: "", priceSM: "9.49", priceLG: "14.49" },
-            { category: "Pizza", item: "Bacon Ranch Pizza", desc: "", priceSM: "9.49", priceLG: "14.49" },
-            { category: "Pizza", item: "Chicken Bacon Ranch", desc: "Specialty", priceSM: "9.99", priceLG: "14.99" },
-            { category: "Pizza", item: "Cheese Bread", desc: "", price: "5.99" },
-            { category: "Pizza", item: "Extra Cheese", desc: "Add to any pizza", price: "+1.50" },
-            { category: "Pizza", item: "Extra Toppings", desc: "Pepperoni, Beef, Sausage, Bacon, Black Olive, Mushroom, Banana Pepper, Onion, Bell Pepper, Jalapeño", price: "+1.00 ea" },
+                // PIZZA
+                { category: "Pizza", item: "Plain / Cheese", desc: "Regular or thin crust", price: "11.99" },
+                { category: "Pizza", item: "BBQ Pizza", desc: "", price: "11.99" },
+                { category: "Pizza", item: "Bacon Ranch Pizza", desc: "", price: "11.99" },
+                { category: "Pizza", item: "Chicken Bacon Ranch", desc: "Specialty", price: "11.99" },
+                { category: "Pizza", item: "Cheese Bread", desc: "", price: "5.99" },
+                { category: "Pizza", item: "Extra Cheese", desc: "Add to any pizza", price: "+1.50" },
+                { category: "Pizza", item: "Extra Toppings", desc: "Pepperoni, Beef, Sausage, Bacon, Black Olive, Mushroom, Banana Pepper, Onion, Bell Pepper, Jalapeño", price: "+1.00 ea" },
 
-            // WINGS
-            { category: "Wings", item: "5 Piece Wings", desc: "Plain, breaded, buffalo, bbq, teriyaki, or lemon pepper", price: "5.99" },
-            { category: "Wings", item: "10 Piece Wings", desc: "Plain, breaded, buffalo, bbq, teriyaki, or lemon pepper", price: "10.99" },
-            { category: "Wings", item: "25 Piece Wings", desc: "Plain, breaded, buffalo, bbq, teriyaki, or lemon pepper", price: "24.99" },
-            { category: "Wings", item: "Ranch Packs", desc: "", price: "0.75" },
+                // WINGS
+                { category: "Wings", item: "5 Piece Wings", desc: "Plain, breaded, buffalo, bbq, teriyaki, or lemon pepper", price: "5.99" },
+                { category: "Wings", item: "10 Piece Wings", desc: "Plain, breaded, buffalo, bbq, teriyaki, or lemon pepper", price: "10.99" },
+                { category: "Wings", item: "25 Piece Wings", desc: "Plain, breaded, buffalo, bbq, teriyaki, or lemon pepper", price: "24.99" },
+                { category: "Wings", item: "Ranch Packs", desc: "", price: "0.75" },
 
-            // CHICKEN BITES & TENDERS
-            { category: "Chicken Bites & Tenders", item: "Chicken Bites", desc: "Plain or buffalo", priceSM: "5.99", priceLG: "8.99" },
-            { category: "Chicken Bites & Tenders", item: "Tenders", desc: "Per piece", price: "2.49" },
-            { category: "Chicken Bites & Tenders", item: "Tenders Party Pack", desc: "5 cups", price: "24.99" },
-            { category: "Chicken Bites & Tenders", item: "Dipping Sauce", desc: "", price: "0.50" },
+                // CHICKEN BITES & TENDERS
+                { category: "Chicken Bites & Tenders", item: "Chicken Bites", desc: "Plain or buffalo", priceSM: "5.99", priceLG: "8.99" },
+                { category: "Chicken Bites & Tenders", item: "Tenders", desc: "Per piece", price: "2.49" },
+                { category: "Chicken Bites & Tenders", item: "Tenders Party Pack", desc: "5 cups", price: "24.99" },
+                { category: "Chicken Bites & Tenders", item: "Dipping Sauce", desc: "", price: "0.50" },
 
-            // BEVERAGES
-            { category: "Beverages", item: "Coffee", desc: "", price: "1.49" },
-            { category: "Beverages", item: "Large Fountain Drink", desc: "", price: "1.69" },
-            { category: "Beverages", item: "Cup of Ice", desc: "", price: "0.99" },
-        ];
+                // BEVERAGES
+                { category: "Beverages", item: "Coffee", desc: "", price: "1.49" },
+                { category: "Beverages", item: "Large Fountain Drink", desc: "", price: "1.69" },
+                { category: "Beverages", item: "Cup of Ice", desc: "", price: "0.99" },
+            ];
 
-        // ============================================================
-        // CSV PARSER
-        // ============================================================
-        function parseCSV(csvText) {
-            const lines = csvText.trim().split('\n');
-            if (lines.length < 2) return [];
-            
-            const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, '').toLowerCase());
-            const items = [];
+            // ============================================================
+            // CSV PARSER
+            // ============================================================
+            function parseCSV(csvText) {
+                const lines = csvText.trim().split('\n');
+                if (lines.length < 2) return [];
 
-            for (let i = 1; i < lines.length; i++) {
-                const values = parseCSVLine(lines[i]);
-                if (values.length < 2) continue;
+                const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, '').toLowerCase());
+                const items = [];
 
-                const row = {};
-                headers.forEach((h, idx) => {
-                    row[h] = (values[idx] || '').trim().replace(/^"|"$/g, '');
-                });
+                for (let i = 1; i < lines.length; i++) {
+                    const values = parseCSVLine(lines[i]);
+                    if (values.length < 2) continue;
 
-                if (!row.category || !row.item) continue;
-
-                items.push({
-                    category: row.category,
-                    item: row.item,
-                    desc: row.description || '',
-                    price: row.price || '',
-                    priceSM: row.price_sm || row.pricesm || '',
-                    priceLG: row.price_lg || row.pricelg || '',
-                });
-            }
-            return items;
-        }
-
-        function parseCSVLine(line) {
-            const result = [];
-            let current = '';
-            let inQuotes = false;
-            for (let i = 0; i < line.length; i++) {
-                const c = line[i];
-                if (c === '"') {
-                    inQuotes = !inQuotes;
-                } else if (c === ',' && !inQuotes) {
-                    result.push(current);
-                    current = '';
-                } else {
-                    current += c;
-                }
-            }
-            result.push(current);
-            return result;
-        }
-
-        // ============================================================
-        // RENDER MENU
-        // ============================================================
-        function renderMenu(items) {
-            const container = document.getElementById('menuContainer');
-            const tabsContainer = document.getElementById('categoryTabs');
-
-            // Get unique categories in order
-            const categories = [];
-            items.forEach(item => {
-                if (!categories.includes(item.category)) {
-                    categories.push(item.category);
-                }
-            });
-
-            // Build tabs
-            tabsContainer.innerHTML = '<button class="category-tab active" data-category="all">All</button>';
-            categories.forEach(cat => {
-                const btn = document.createElement('button');
-                btn.className = 'category-tab';
-                btn.dataset.category = cat;
-                btn.textContent = cat;
-                tabsContainer.appendChild(btn);
-            });
-
-            // Build menu HTML
-            function buildMenuHTML(filter) {
-                let html = '';
-                const filteredCategories = filter === 'all'
-                    ? categories
-                    : categories.filter(c => c === filter);
-
-                filteredCategories.forEach((cat, idx) => {
-                    const catItems = items.filter(i => i.category === cat);
-                    html += '<div class="menu-category fade-in" style="animation-delay: ' + (idx * 0.1) + 's">';
-                    html += '<h3 class="menu-category-title">' + escapeHTML(cat) + '</h3>';
-                    html += '<div class="menu-grid">';
-
-                    catItems.forEach(item => {
-                        html += '<div class="menu-item">';
-                        html += '  <div class="menu-item-info">';
-                        html += '    <div class="menu-item-name">' + escapeHTML(item.item) + '</div>';
-                        if (item.desc) {
-                            html += '    <div class="menu-item-desc">' + escapeHTML(item.desc) + '</div>';
-                        }
-                        html += '  </div>';
-                        html += '  <div class="menu-item-price">';
-
-                        if (item.priceSM && item.priceLG) {
-                            html += '    <div class="price-row"><span class="price-size">SM</span> ' + formatPrice(item.priceSM) + '</div>';
-                            html += '    <div class="price-row"><span class="price-size">LG</span> ' + formatPrice(item.priceLG) + '</div>';
-                        } else if (item.price) {
-                            html += formatPrice(item.price);
-                        }
-
-                        html += '  </div>';
-                        html += '</div>';
+                    const row = {};
+                    headers.forEach((h, idx) => {
+                        row[h] = (values[idx] || '').trim().replace(/^"|"$/g, '');
                     });
 
-                    html += '</div></div>';
-                });
+                    if (!row.category || !row.item) continue;
 
-                return html;
+                    items.push({
+                        category: row.category,
+                        item: row.item,
+                        desc: row.description || '',
+                        price: row.price || '',
+                        priceSM: row.price_sm || row.pricesm || '',
+                        priceLG: row.price_lg || row.pricelg || '',
+                    });
+                }
+                return items;
             }
 
-            // Initial render
-            container.innerHTML = buildMenuHTML('all');
-
-            // Tab click handling
-            tabsContainer.addEventListener('click', function(e) {
-                if (!e.target.classList.contains('category-tab')) return;
-
-                tabsContainer.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
-                e.target.classList.add('active');
-
-                const filter = e.target.dataset.category;
-                container.innerHTML = buildMenuHTML(filter);
-            });
-        }
-
-        function formatPrice(price) {
-            if (!price) return '';
-            const p = price.toString().trim();
-            if (p.startsWith('+')) return p;
-            if (p.startsWith('$')) return p;
-            if (p.match(/^\d/)) return '$' + p;
-            return p;
-        }
-
-        function escapeHTML(str) {
-            const div = document.createElement('div');
-            div.textContent = str;
-            return div.innerHTML;
-        }
-
-        // ============================================================
-        // FETCH FROM GOOGLE SHEETS OR USE FALLBACK
-        // ============================================================
-        async function loadMenu() {
-            if (SHEET_CSV_URL) {
-                try {
-                    const resp = await fetch(SHEET_CSV_URL);
-                    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-                    const csv = await resp.text();
-                    const items = parseCSV(csv);
-                    if (items.length > 0) {
-                        renderMenu(items);
-                        return;
+            function parseCSVLine(line) {
+                const result = [];
+                let current = '';
+                let inQuotes = false;
+                for (let i = 0; i < line.length; i++) {
+                    const c = line[i];
+                    if (c === '"') {
+                        inQuotes = !inQuotes;
+                    } else if (c === ',' && !inQuotes) {
+                        result.push(current);
+                        current = '';
+                    } else {
+                        current += c;
                     }
-                    throw new Error('No items parsed from sheet');
-                } catch (err) {
-                    console.error('Google Sheets fetch failed, using fallback:', err);
+                }
+                result.push(current);
+                return result;
+            }
+
+            // ============================================================
+            // RENDER MENU
+            // ============================================================
+            function renderMenu(items) {
+                const container = document.getElementById('menuContainer');
+                const tabsContainer = document.getElementById('categoryTabs');
+
+                // Get unique categories in order
+                const categories = [];
+                items.forEach(item => {
+                    if (!categories.includes(item.category)) {
+                        categories.push(item.category);
+                    }
+                });
+
+                // Build tabs
+                tabsContainer.innerHTML = '<button class="category-tab active" data-category="all">All</button>';
+                categories.forEach(cat => {
+                    const btn = document.createElement('button');
+                    btn.className = 'category-tab';
+                    btn.dataset.category = cat;
+                    btn.textContent = cat;
+                    tabsContainer.appendChild(btn);
+                });
+
+                // Build menu HTML
+                function buildMenuHTML(filter) {
+                    let html = '';
+                    const filteredCategories = filter === 'all'
+                        ? categories
+                        : categories.filter(c => c === filter);
+
+                    filteredCategories.forEach((cat, idx) => {
+                        const catItems = items.filter(i => i.category === cat);
+                        html += '<div class="menu-category fade-in" style="animation-delay: ' + (idx * 0.1) + 's">';
+                        html += '<h3 class="menu-category-title">' + escapeHTML(cat) + '</h3>';
+                        html += '<div class="menu-grid">';
+
+                        catItems.forEach(item => {
+                            html += '<div class="menu-item">';
+                            html += '  <div class="menu-item-info">';
+                            html += '    <div class="menu-item-name">' + escapeHTML(item.item) + '</div>';
+                            if (item.desc) {
+                                html += '    <div class="menu-item-desc">' + escapeHTML(item.desc) + '</div>';
+                            }
+                            html += '  </div>';
+                            html += '  <div class="menu-item-price">';
+
+                            if (item.priceSM && item.priceLG) {
+                                html += '    <div class="price-row"><span class="price-size">SM</span> ' + formatPrice(item.priceSM) + '</div>';
+                                html += '    <div class="price-row"><span class="price-size">LG</span> ' + formatPrice(item.priceLG) + '</div>';
+                            } else if (item.price) {
+                                html += formatPrice(item.price);
+                            }
+
+                            html += '  </div>';
+                            html += '</div>';
+                        });
+
+                        html += '</div></div>';
+                    });
+
+                    return html;
+                }
+
+                // Initial render
+                container.innerHTML = buildMenuHTML('all');
+
+                // Tab click handling
+                tabsContainer.addEventListener('click', function (e) {
+                    if (!e.target.classList.contains('category-tab')) return;
+
+                    tabsContainer.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+                    e.target.classList.add('active');
+
+                    const filter = e.target.dataset.category;
+                    container.innerHTML = buildMenuHTML(filter);
+                });
+            }
+
+            function formatPrice(price) {
+                if (!price) return '';
+                const p = price.toString().trim();
+                if (p.startsWith('+')) return p;
+                if (p.startsWith('$')) return p;
+                if (p.match(/^\d/)) return '$' + p;
+                return p;
+            }
+
+            function escapeHTML(str) {
+                const div = document.createElement('div');
+                div.textContent = str;
+                return div.innerHTML;
+            }
+
+            // ============================================================
+            // FETCH FROM GOOGLE SHEETS OR USE FALLBACK
+            // ============================================================
+            async function loadMenu() {
+                if (SHEET_CSV_URL) {
+                    try {
+                        const resp = await fetch(SHEET_CSV_URL);
+                        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                        const csv = await resp.text();
+                        const items = parseCSV(csv);
+                        if (items.length > 0) {
+                            renderMenu(items);
+                            return;
+                        }
+                        throw new Error('No items parsed from sheet');
+                    } catch (err) {
+                        console.error('Google Sheets fetch failed, using fallback:', err);
+                        renderMenu(FALLBACK_MENU);
+                    }
+                } else {
+                    // No sheet URL configured — use fallback
                     renderMenu(FALLBACK_MENU);
                 }
-            } else {
-                // No sheet URL configured — use fallback
-                renderMenu(FALLBACK_MENU);
             }
-        }
 
-        // ============================================================
-        // SCROLL REVEAL
-        // ============================================================
-        function initScrollReveal() {
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                },
-                { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-            );
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        }
+            // ============================================================
+            // SCROLL REVEAL
+            // ============================================================
+            function initScrollReveal() {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    },
+                    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+                );
+                document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            }
 
-        // ============================================================
-        // INIT
-        // ============================================================
-        document.addEventListener('DOMContentLoaded', function() {
-            loadMenu();
-            initScrollReveal();
-        });
-    })();
+            // ============================================================
+            // INIT
+            // ============================================================
+            document.addEventListener('DOMContentLoaded', function () {
+                loadMenu();
+                initScrollReveal();
+            });
+        })();
     </script>
 
 </body>
+
 </html>
